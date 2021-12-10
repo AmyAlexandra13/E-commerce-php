@@ -7,7 +7,7 @@ session_start();
 $layout = New Layout('Cart');
 ?>
 
-<?php $layout->printheader();?>
+<?php $layout->printheader("css/index.css");?>
 
 
   <main>    

@@ -13,7 +13,7 @@
     }
     
     
-    public function printheader(){
+    public function printheader($path){
         $header = <<<EOF
         <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopAmy</title>
     <link rel="stylesheet" href="layout/layout.css">
-   <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <link rel="stylesheet" href=$path> 
 
 
 

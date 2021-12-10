@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Freehand&family=Patrick+Hand&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.headerproducts{
+    background-image: url("../images/header-bg.jpeg");
+    height: calc(100vh - 150px);
+    background-size: cover;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.headerproducts :first-child{
+    font-family: 'Freehand', sans-serif;
+    position: relative;
+    padding-top: 10%;
+    font-size: 350%;
+    color: rgb(255, 0, 255);
+}
+
+.headerproducts :nth-child(2){
+    color: black;
+    font-family: 'Patrick Hand';
+    font-size: 150%;
+    text-align: center  ;
+    display: block;
+}
+
+.containerProducts{
+    display: grid; 
+    align-items: center;
+    grid-template-columns: 290px 290px 290px;
+    grid-gap:  10px 40px;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 10%;
+}
+h2{
+    color: pink;
+}

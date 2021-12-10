@@ -16,33 +16,41 @@ $productos = $dataproducts->GetAllProducts();
 $layout = New Layout('Products');
 ?>
 
-<?php $layout->printheader();?>
+<?php $layout->printheader("css/products.css");?>
+<header class ="headerproducts">
+  <h1>Technological products </h1>
+  <p>Start shopping the best technological products<br> around the world </p>
+
+</header>
 <main>
-    <div>
-        <h2>Products</h2>
+ 
+    <div class="containerProducts">
+      
         <?php if(empty($productos)) : ?>
             <h2>No hay productos, gloria a Dios </h2>
 
             <?php else: ?>
                 <?php foreach ($productos as $product) : ?>
                     <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="<?php echo $product->urlphoto?>" alt="Card image cap">
+  <img class="card-img-top" width="60" height="200" src="<?php echo $product->urlphoto?>" alt="Product image">
   <div class="card-body">
     <h5 class="card-title"><?php echo$product->name?></h5>
-    <h5 class="card-title">gloria a Dios!</h5>
     <p class="card-text"><?php echo$product->description?></p>
     <p class="card-text"><?php echo$product->price?></p>
     <a href="#" class="btn btn-primary">Add to the cart</a>
   </div>
 </div>
 
+              
+
 <?php endforeach; ?>
             <?php endif; ?>
-         
 
-         
 
-</div>
+          
+                </div>
+         
+</div> <!-- Container ends -->
 
 </main>
 
