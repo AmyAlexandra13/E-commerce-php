@@ -36,7 +36,7 @@
 <header class="topheader">
     <!--The header for the menu on the top !-->
 
-    <a href="index.html" id="bname"><i class="fas fa-store"></i>ShopAmy</a>
+    <a href="index.php" id="bname"><i class="fas fa-store"></i>ShopAmy</a>
    
     <!-- this button would be for screen sizes -->
    <!-- Collapse button -->
