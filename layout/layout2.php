@@ -61,13 +61,15 @@
     </li>
 
     <li class="nav-item">
+    <a class="nav-link" href="contact.php">Contact</a>
+    </li>
+
+
+    <li class="nav-item">
       <a class="nav-link" href="about.php">About</a>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="contact.php">Contact</a>
-        </li>
-
+     
 
     
   </ul>
@@ -83,8 +85,8 @@
     <ul>
         <li><a href="index.php">Home</a> </li>
         <li><a href="products.php">Products</a></li>
+        <li><a href="contact.php">Contact</a></li>
 <li><a href="about.php">About</a></li>
-<li><a href="contact.php">Contact</a></li>
 <li><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
 </ul>
 </navbar>

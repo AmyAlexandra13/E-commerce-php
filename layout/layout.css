@@ -233,13 +233,9 @@ footer
 
 }
 
-@media (max-width: 780px) {
-    #containerbutton{
-        display: none;
-    }
+
 
     
-}
 
 
 /* This shows the burger button */
@@ -279,5 +275,26 @@ footer
 
 }
 
+@media (max-width: 780px) {
+/* check the width: ; */
+    .topheader
+    {
+        width: 100%;
+    }
+    #containerbutton{
+        display: inline-block;
+       cursor: pointer;
+    }
+}
 
+
+    @media (max-width: 420px) {
+        #containerbutton{
+            display: inline-block;
+           cursor: pointer;
+        }
+
+
+    
+}
 

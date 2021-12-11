@@ -7,7 +7,7 @@ session_start();
 $layout = New Layout('About');
 ?>
 
-<?php $layout->printheader();?>
+<?php $layout->printheader("css/about.css");?>
 <main>
     <h1>Hey im here </h1>
 </main>

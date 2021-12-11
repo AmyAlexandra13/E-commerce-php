@@ -31,12 +31,12 @@ $layout = New Layout('Products');
 
             <?php else: ?>
                 <?php foreach ($productos as $product) : ?>
-                    <div class="card" style="width: 18rem;">
+                    <div class="card">
   <img class="card-img-top" width="60" height="200" src="<?php echo $product->urlphoto?>" alt="Product image">
   <div class="card-body">
     <h5 class="card-title"><?php echo$product->name?></h5>
     <p class="card-text"><?php echo$product->description?></p>
-    <p class="card-text"><?php echo$product->price?></p>
+    <p id="price" class="card-text">$<?php echo$product->price?></p>
     <a href="#" class="btn btn-primary">Add to the cart</a>
   </div>
 </div>
