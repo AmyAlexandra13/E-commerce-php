@@ -1,0 +1,31 @@
+@mixin grid($val){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+}
+
+$maincolor: rgb(255, 0, 255);
+
+.checkout-container{
+
+    .infocheck-container{
+        @include grid(22rem);
+        background-color: pink;
+
+     
+        }
+    }
+
+
+    .done-container{
+        {
+            .doneinfo-container{
+                @include grid(22rem);
+            }
+        }
+    }
+
+
+
+
+    
+      

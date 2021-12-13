@@ -42,7 +42,7 @@ $layout = New Layout('Products');
     <h5 class="card-title"><?php echo$product->name?></h5>
     <p class="card-text"><?php echo$product->description?></p>
     <p id="price" class="card-text">$<?php echo$product->price?></p>
-    <button type="submit" class="btn btn-primary">Add to the cart</button>
+    <button id="btn-addproduct" onclick="done()" type="submit" class="btn btn-primary">Add to the cart</button>
        </form>
   </div>
 </div>
@@ -59,6 +59,12 @@ $layout = New Layout('Products');
 </div> <!-- Container ends -->
 
 </main>
+
+<script>
+  function done(){
+    alert("You have added a product to the cart");
+  }
+  </script>
 
 <?php $layout->printfooter();?>
 
