@@ -1,0 +1,29 @@
+@mixin grid($val){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+}
+
+main{
+    margin: 1rem;
+}
+
+$maincolor: rgb(255, 0, 255);
+.done-container{
+   
+    .doneinfo-container{
+      display: flex;
+      flex-direction: column;
+
+         h1 ,p{
+        font-family: 'Readex Pro', sans-serif;
+        text-align: center;
+        color:$maincolor;   
+    }
+        p{
+            margin: 0 auto;
+            color: blue;
+        }
+
+       
+    }
+}

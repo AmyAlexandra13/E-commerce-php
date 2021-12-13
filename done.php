@@ -27,7 +27,6 @@ $newrealcart = new RealCart();
 
 $dataspecificcart = $servicetempcart->GetSpecificInformation();//
 
-
 if(isset($_POST['name'])){
     $newuser = new Users();
     $newuser->InizializeData(0, $_POST['name'],$_POST['lastname'], $_POST['email'], $_POST['contra'], $_POST['payment'], "normal");
@@ -61,24 +60,58 @@ foreach ($dataspecificcart as $tempcartdata):
   $newrealcart = new RealCart();
   $newrealcart->InizializeData(0,$getlastid,$tempcartdata->idproduct,0,$tempcartdata->quantity_product);
   $servicerealcart->AddRealCart($newrealcart);
-endforeach;
-
-
+endforeach; //add every product from tempcart, it works!
 
 
 ?>
 
-<?php $layout->printheader("css/checkout.css");?>
-
+<?php $layout->printheader("css/done.css");?>
+<main>
 <div class="done-container">
+
+
+<?php $lastinforealcart = $servicerealcart->GetLastInfo($getlastid) ?>
+
+<section class="indicator2">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="cart.php">Cart</a></li>
+    <li class="breadcrumb-item"><a href="checkout.php">Checkout</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Total price</li>
+  </ol>
+</nav>
+</section>
+
 <div class="doneinfo-container">
-<h1><?php echo $getlastid?> </h1>
-<?php var_dump($newrealcart); ?>
+
+  <h1>Thank you for shopping at Shoapmy</h1>
+  <p>We sent an email with more information about your cart </p>
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Product name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+  <?php foreach($lastinforealcart as $info) : ?>
+    <tr>
+      <th scope="row"><?php echo $info->name?></th>
+      <td><?php echo $info->price?></td>
+      <td><?php echo $info->quantityproduct?></td>
+     
+    </tr>
+    <?php endforeach; ?>
+  </tbody>
+</table>
+
+
 
 </div><!-- the done info container ends -->
 
 </div> <!-- the done container ends -->
-
+</main>
 
 <?php $layout->printfooter("css/checkout.css");?>
 
