@@ -45,6 +45,7 @@ $layout = New Layout('Checkout');
                     <h4 class="text-center">Complete the information</h4>
                 </div>
 
+                <input hidden type="text" name="id_user" value="0">
                 <div class="mb-3">
                     <label class="form-label">Name:</label>
                     <input type="text" name="name" class="form-control">

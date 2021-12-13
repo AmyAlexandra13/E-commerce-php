@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAOA,AAEI,mBAFe,CAEf,oBAAoB,CAAA;EARpB,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,oCAAmC;EAStD,gBAAgB,EAAE,IAAI;CAGrB",
+    "mappings": "AAOA,AAEI,mBAFe,CAEf,oBAAoB,CAAA;EARpB,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,oCAAmC;EAStD,gBAAgB,EAAE,IAAI;CAGrB;;AAIL,AAEQ,eAFO,CAEP,mBAAmB,CAAA;EAnB3B,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,oCAAmC;CAoBjD",
     "sources": [
         "checkout.scss"
     ],
