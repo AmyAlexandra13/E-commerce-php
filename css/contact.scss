@@ -4,7 +4,6 @@
 // https://css-tricks.com/introduction-fr-css-unit/
 
 // From this documentation, I could learn how to implement mixin grid to create a resposive layout easier with saass
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@700&display=swap');
 
 $maincolor: rgb(255, 0, 255);
 
@@ -67,6 +66,7 @@ p{
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
+       
 
         form{
             flex: 1 41rem;

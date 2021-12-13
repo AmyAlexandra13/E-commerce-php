@@ -5,6 +5,9 @@ require_once 'Objects\Products2.php';
 require_once 'ProductHandler\ProductHandler.php';
 require_once 'FileHandler\JsonFileHandler.php';
 require_once 'databaseHandler\databaseConnection.php';
+require_once 'Objects\TempCart.php';
+require_once 'Services\TempCartHandler.php';
+
 
 
 session_start();
@@ -31,13 +34,16 @@ $layout = New Layout('Products');
 
             <?php else: ?>
                 <?php foreach ($productos as $product) : ?>
+                  <form action="cart.php" method="POST">
                     <div class="card">
   <img class="card-img-top" width="60" height="200" src="<?php echo $product->urlphoto?>" alt="Product image">
   <div class="card-body">
+  <input hidden class="card-text" name="id_product" value="<?php echo$product->idproduct?>">
     <h5 class="card-title"><?php echo$product->name?></h5>
     <p class="card-text"><?php echo$product->description?></p>
     <p id="price" class="card-text">$<?php echo$product->price?></p>
-    <a href="#" class="btn btn-primary">Add to the cart</a>
+    <button type="submit" class="btn btn-primary">Add to the cart</button>
+       </form>
   </div>
 </div>
 

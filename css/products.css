@@ -38,7 +38,7 @@
     padding-bottom: 5%;
 }
 
-.card{
+.card, .form{
     width: 18rem;
     height: 29rem;
 }
@@ -52,8 +52,7 @@
     }
     .containerProducts
     {
-        margin-right: 10%;
-        margin-left: 10%;
+padding-right: 10%;        
         grid-gap:  10px 40px;
     }
 
@@ -93,6 +92,12 @@
 
     @media (max-width: 820px) 
 {
+    .containerProducts
+    {
+        margin-right: 10%;
+        margin-left: 10%;
+        grid-gap:  10px 40px;
+    }
 
 }
 

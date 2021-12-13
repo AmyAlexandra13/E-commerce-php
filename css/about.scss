@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@700&display=swap');
+
+$maincolor: rgb(255, 0, 255);
+
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@700&display=swap');
+
+$maincolor: rgb(255, 0, 255);
+$bg-layout: #fdeaf2;
+@mixin grid($val){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 1.5rem;
+}
+
+@keyframes animation2 {
+    0%   {background-color:$bg-layout; left:0px; top:10px;}
+    25%  {background-color: white; left:0px; top:0px;}
+    100% {background-color:$bg-layout; left:0px; top:10px;}
+    
+}
+
+.about-container{
+    @include grid(22rem);
+   
+ 
+   
+    .image-container {
+  
+        flex:1rem;
+        img{
+            width: 100%;
+        }
+    }
+    .text-content{
+        background-color: #f5f5f5;
+        border-radius: 2rem;
+        padding: 10%;
+     flex:1rem;
+     position: relative;
+     animation-name: animation2;
+     animation-duration: 4s;
+     animation-iteration-count: infinite;
+
+     h3{
+         color: $maincolor;
+     font-family: 'Readex Pro', sans-serif;;
+     }
+
+     p{
+        font-family: 'Patrick Hand';
+        font-size: 2rem;
+     }
+        }
+}

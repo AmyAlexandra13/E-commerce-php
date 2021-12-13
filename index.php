@@ -10,7 +10,7 @@ $layout = New Layout('Cart');
 <?php $layout->printheader("css/index.css");?>
 
 
-  <main>    
+
         <div class="firstinfo"><!--It can be the container of the photo and image-->
       <div class="image1">
         <img src="images/shopp1.jpg" alt="I am loading..." >
@@ -19,7 +19,7 @@ $layout = New Layout('Cart');
       <div class="image1-text">
         <h1>Start shopping</h1>
         <p>The best way to go shopping it's online</p>
-        <a href="#" class="btn btn-outline-light">Go shopping</a>
+        <a href="products.php" class="btn btn-outline-light">Go shopping</a>
       </div>
      </div> <!--the container ends -->
 
@@ -45,7 +45,7 @@ $layout = New Layout('Cart');
     
     
 
-    </main>
+ 
    
 
     <?php $layout->printfooter();?>

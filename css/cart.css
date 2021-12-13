@@ -1,0 +1,31 @@
+main {
+  padding-left: 6rem;
+  margin: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cart-container h1 {
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 1.8rem;
+}
+
+.cart-container .product-container2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(22rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 2rem;
+}
+
+.cart-container .product-container2 .card {
+  width: 15rem;
+  padding: 0.7rem;
+  border-radius: 1.5rem;
+  background-color: #faeaf0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=cart.css.map */

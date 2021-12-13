@@ -1,0 +1,51 @@
+@mixin grid($val){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 2rem;
+}
+
+main{
+    padding-left: 6rem;
+    margin: 1rem;
+  justify-content: center;
+    
+ }
+
+ .cart-container{
+     
+   
+   
+    h1{
+        font-family: 'Readex Pro', sans-serif;
+        font-size: 1.8rem;
+        // text-align: center;
+       
+    }
+
+.product-container2{
+    @include grid(22rem);
+    // justify-content: center;
+    // align-items: center;
+   
+ 
+   
+
+    
+    .card{
+        width: 15rem;
+         padding: 0.7rem;
+        border-radius: 1.5rem;
+        background-color: #faeaf0;
+        justify-content: center;
+
+      
+
+      
+
+    }
+
+}
+ }
+
+
+

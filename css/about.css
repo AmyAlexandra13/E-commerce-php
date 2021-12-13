@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@700&display=swap");
+@-webkit-keyframes animation2 {
+  0% {
+    background-color: #fdeaf2;
+    left: 0px;
+    top: 10px;
+  }
+  25% {
+    background-color: white;
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    background-color: #fdeaf2;
+    left: 0px;
+    top: 10px;
+  }
+}
+@keyframes animation2 {
+  0% {
+    background-color: #fdeaf2;
+    left: 0px;
+    top: 10px;
+  }
+  25% {
+    background-color: white;
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    background-color: #fdeaf2;
+    left: 0px;
+    top: 10px;
+  }
+}
+
+.about-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(22rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 1.5rem;
+}
+
+.about-container .image-container {
+  -webkit-box-flex: 1rem;
+      -ms-flex: 1rem;
+          flex: 1rem;
+}
+
+.about-container .image-container img {
+  width: 100%;
+}
+
+.about-container .text-content {
+  background-color: #f5f5f5;
+  border-radius: 2rem;
+  padding: 10%;
+  -webkit-box-flex: 1rem;
+      -ms-flex: 1rem;
+          flex: 1rem;
+  position: relative;
+  -webkit-animation-name: animation2;
+          animation-name: animation2;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.about-container .text-content h3 {
+  color: magenta;
+  font-family: 'Readex Pro', sans-serif;
+}
+
+.about-container .text-content p {
+  font-family: 'Patrick Hand';
+  font-size: 2rem;
+}
+/*# sourceMappingURL=about.css.map */
