@@ -1,8 +1,20 @@
 <?php
 
 require_once 'layout\layout2.php';
+require_once 'Objects\Products2.php';
+require_once 'databaseHandler\databaseConnection.php';
+require_once 'FileHandler\JsonFileHandler.php';
+require_once 'ProductHandler\ProductHandler.php';
+
+
+
+
 
 session_start();
+
+
+$dataproducts = new ProductHandler('databaseHandler'); //first fx, it was not supposed to point one folder back
+$productos = $dataproducts->GetAllProducts();
 
 $layout = New Layout('Cart');
 ?>
@@ -27,18 +39,34 @@ $layout = New Layout('Cart');
         <div class="letter">
         <h2 id="ha">Top best deals2</h2> 
       </div>
+
     </div>   <!-- best deals container  ends-->
 
       <div class="deals-items">
+        <?php foreach($productos as $product) : ?>
+          <?php if($product->price > 230) : ?>
+            <form action="cart.php" method="POST">
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="images/shopp2.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
+        <img class="card-img-top" width="60" height="200" src="<?php echo $product->urlphoto?>" alt="Product image">
+  <div class="card-body">
+  <input hidden class="card-text" name="id_product" value="<?php echo$product->idproduct?>">
+    <h5 class="card-title"><?php echo$product->name?></h5>
+    <p class="card-text"><?php echo$product->description?></p>
+    <p id="price" class="card-text">$<?php echo$product->price?></p>
+    <button id="btn-addproduct2" onclick="done2()" type="submit" class="btn btn-primary">Add to the cart</button>
+       </form>
+  </div>
+</div>
+
+<script>
+  function done2(){
+alert("You have added a product to the cart");
+  }
+          </script>
+        <?php endif; ?>
+        <?php endforeach; ?>
+       
+      </div>  <!-- deals items container  ends-->
 
       
     

@@ -20,6 +20,7 @@ $layout = New Layout('Checkout');
 $servicetempcart = new TempCartHandler('databaseHandler');
 $serviceuser = new UserHandler('databaseHandler');
 $servicerealcart = new RealCartHandler('databaseHandler');
+$truncate = false;
 
 $newuser = new Users();
 $newrealcart = new RealCart();
@@ -60,7 +61,12 @@ foreach ($dataspecificcart as $tempcartdata):
   $newrealcart = new RealCart();
   $newrealcart->InizializeData(0,$getlastid,$tempcartdata->idproduct,0,$tempcartdata->quantity_product);
   $servicerealcart->AddRealCart($newrealcart);
+$servicetempcart->DeleteTempCart();
 endforeach; //add every product from tempcart, it works!
+
+
+
+
 
 
 ?>
@@ -71,6 +77,7 @@ endforeach; //add every product from tempcart, it works!
 
 
 <?php $lastinforealcart = $servicerealcart->GetLastInfo($getlastid) ?>
+<?php echo $getlastid?>
 
 <section class="indicator2">
 <nav aria-label="breadcrumb">

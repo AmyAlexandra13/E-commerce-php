@@ -70,6 +70,20 @@ class TempCartHandler{
             return $tableList;
         }
     }
+
+    function DeleteById($id){
+        $stm = $this->connection->db->prepare("delete from tempcart where id_product = ?");
+        $stm->bind_param('i', $id);
+        $stm->execute();
+        $stm->close();
+    }
+
+    function DeleteTempCart()
+    {
+        $stm = $this->connection->db->prepare('truncate table tempcart');
+        $stm->execute();
+        $stm->close();
+    }
     
 
 

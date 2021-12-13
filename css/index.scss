@@ -1,0 +1,13 @@
+@mixin grid($val){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 1.5rem;
+}
+
+.deals-items{
+    @include grid(22rem);
+    .card{
+       margin: 0 auto;
+       margin-bottom: 1rem;
+    }
+}

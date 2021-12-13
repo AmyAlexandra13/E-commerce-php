@@ -17,6 +17,10 @@ $(document).ready(function(){
     alert("hey, let-s pay");
   });
 
+  $("#deleteproduct").on("click", function(){
+    alert("hey, you are going to delete");
+  });
+  
 
 
     

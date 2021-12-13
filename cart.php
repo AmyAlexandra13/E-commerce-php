@@ -50,9 +50,10 @@ $dataspecific = $servicetempcart->GetSpecificInformation();
       <?php else: ?>
          <?php foreach($dataspecific as $data) : ?>
             <div class="card">
-            
+            <form action="data.php" method="POST">
   <img src="<?php echo $data->urlphoto?>"  width="60" height="200" class="card-img-top" alt="Product image">
   <div class="card-body">
+  <input hidden class="card-text" name="id_product" value="<?php echo$data->idproduct?>">
     <h5 class="card-title"><?php echo $data->name?></h5>
     <p class="card-text">Price: <?php echo $data->price?></p>
     <select class="form-select form-select-sm" aria-label=".form-select-sm example">
@@ -60,9 +61,8 @@ $dataspecific = $servicetempcart->GetSpecificInformation();
   <option value="2">2</option>
   <option value="3">3</option>
 </select>
-   
-<a href="#" id="deleteproduct" class="btn btn-danger">Delete</a>
-       
+<button type="submit" id="deleteproduct" class="btn btn-danger">Delete</button>
+         </form>
    
   </div>
 </div>
