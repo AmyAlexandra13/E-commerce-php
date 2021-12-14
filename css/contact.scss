@@ -13,6 +13,14 @@ $maincolor: rgb(255, 0, 255);
     gap: 1.5rem;
 }
 
+.input-error
+{
+ 
+  border-color: red;
+  border-width: medium;
+  color: red;
+
+}
 
 main{
    padding: 0.6rem;
@@ -68,7 +76,7 @@ p{
         gap: 1rem;
        
 
-        form{
+        .form{
             flex: 1 41rem;
             border-radius: 1rem;
             background-color: #f5f5f5;

@@ -91,7 +91,7 @@ endforeach; //add every product from tempcart, it works!
 
 <div class="doneinfo-container">
 
-  <h1>Thank you for shopping at Shoapmy</h1>
+  <h1>Thank you for shopping at Shopamy</h1>
   <p>We sent an email with more information about your cart </p>
   <table class="table table-striped">
   <thead>

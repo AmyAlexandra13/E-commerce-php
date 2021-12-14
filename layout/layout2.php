@@ -22,6 +22,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopAmy</title>
+    <meta name="description" content="This website is the best e-commerce ever, where you can find a lot of Information">
     <link rel="stylesheet" href="layout/layout.css">
     <link rel="stylesheet" href=$path> 
 
@@ -143,6 +144,7 @@ EOF;
    
     
       </footer>
+      <script src="js/validation.js"> </script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="js\script2.js"></script>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

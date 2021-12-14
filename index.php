@@ -25,7 +25,7 @@ $layout = New Layout('Cart');
 
         <div class="firstinfo"><!--It can be the container of the photo and image-->
       <div class="image1">
-        <img src="images/shopp1.jpg" alt="I am loading..." >
+        <img src="images/shopp1.jpg" alt="The logo image of ShopAmy" >
       </div>
 
       <div class="image1-text">

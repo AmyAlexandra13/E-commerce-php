@@ -19,6 +19,7 @@ $(document).ready(function(){
 
   $("#deleteproduct").on("click", function(){
     alert("hey, you are going to delete");
+  
   });
   
 

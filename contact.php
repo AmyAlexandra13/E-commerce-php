@@ -40,15 +40,15 @@ $layout = New Layout('Contact');
 
 
   <div class="form-container">
-<form>
+<div class="form">
   <h3>Contact us</h3>
-  <input type="text" placeholder="Type your name" class="inputs"> 
-  <input type="text" placeholder="Type your last name" class="inputs"> 
-  <input type="email" placeholder="Type your email" class="inputs"> 
-  <textarea placeholder="Write your comment" cols="10" rows="10" class="inputs"></textarea>
+  <input id="contact-name" type="text" placeholder="Type your name" class="inputs"> 
+  <input id="contact-lastname" type="text" placeholder="Type your last name" class="inputs"> 
+  <input id="contact-email" type="email" placeholder="Type your email" class="inputs"> 
+  <textarea id="contact-comment" placeholder="Write your comment" cols="10" rows="10" class="inputs"></textarea>
 
-<a class="btn btn-primary">Submit</a>
-</form>
+<button id="btn-contact"  class="btn btn-success">Submit</button>
+</div>
 
 
 
