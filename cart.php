@@ -50,7 +50,7 @@ $dataspecific = $servicetempcart->GetSpecificInformation();
       <?php else: ?>
          <?php foreach($dataspecific as $data) : ?>
             <div class="card">
-            <form action="data.php" method="POST">
+            <form action="ajax.php" method="POST">
   <img src="<?php echo $data->urlphoto?>"  width="60" height="200" class="card-img-top" alt="Product image">
   <div class="card-body">
   <input hidden class="card-text" name="id_product" value="<?php echo$data->idproduct?>">
@@ -61,12 +61,36 @@ $dataspecific = $servicetempcart->GetSpecificInformation();
   <option value="2">2</option>
   <option value="3">3</option>
 </select>
-<button type="submit" id="deleteproduct" class="btn btn-danger">Delete</button>
+<button type="button" onclick="deleteproduct2(<?php echo$data->idproduct?>)" id="deleteproduct" class="btn btn-danger">Delete</button>
          </form>
    
   </div>
 </div>
+<script> //the function is supposed to be withing the foreach to call every id
+   async function postData(url = '', data = {}) {
+    const response = await fetch(url, {
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'same-origin', // include, *same-origin, omit
+      headers: {
+         'Content-Type': 'application/json'
+         // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      redirect: 'follow', // manual, *follow, error
+      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify(data) // body data type must match "Content-Type" header
+   });
+   return response.json(); // parses JSON response into native JavaScript objects
+   }
 
+   function deleteproduct2(id){
+      postData(`http://localhost:8090/finalprojectweb1/ajax.php?id_product=${id}`)
+      .then(data => location.reload());
+
+   }
+
+   </script>
 
             <?php endforeach; ?>
             <?php endif; ?>

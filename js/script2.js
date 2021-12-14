@@ -15,7 +15,7 @@ $(document).ready(function(){
   });
 
   $("#deleteproduct").on("click", function(){
-    alert("hey, you are going to delete");
+    alert("hey, you are going to empty your cart");
   
   });
   
