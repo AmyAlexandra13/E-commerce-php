@@ -10,9 +10,6 @@ $(document).ready(function(){
   //     alert("Ready to pay!!");
   //    });
 
-  
-    
-
   $("#btn-pay").on("click", function(){
     alert("hey, let-s pay");
   });

@@ -24,6 +24,16 @@ $maincolor: rgb(255, 0, 255);
             color: blue;
         }
 
+        #btn-print{
+            text-align: center;
+            display: inline;
+            background-color: pink;
+            width: 15%;
+            margin: 0 auto;
+            border-radius: 1rem;
+            font-family: 'Readex Pro', sans-serif;
+        }
+
        
     }
 }

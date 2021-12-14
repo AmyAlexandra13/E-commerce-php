@@ -77,7 +77,7 @@ endforeach; //add every product from tempcart, it works!
 
 
 <?php $lastinforealcart = $servicerealcart->GetLastInfo($getlastid) ?>
-<?php echo $getlastid?>
+
 
 <section class="indicator2">
 <nav aria-label="breadcrumb">
@@ -93,6 +93,7 @@ endforeach; //add every product from tempcart, it works!
 
   <h1>Thank you for shopping at Shopamy</h1>
   <p>We sent an email with more information about your cart </p>
+  <button id="btn-print">Print your cart</button>
   <table class="table table-striped">
   <thead>
     <tr>
@@ -119,7 +120,7 @@ endforeach; //add every product from tempcart, it works!
 
 </div> <!-- the done container ends -->
 </main>
-
+<script src="js\printing.js"></script>
 <?php $layout->printfooter("css/checkout.css");?>
 
 

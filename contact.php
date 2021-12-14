@@ -60,5 +60,5 @@ $layout = New Layout('Contact');
 </div>  </div>  <!--the contact-container ends -->
 
 </main>
-
+<script src="js/validation.js"> </script>
 <?php $layout->printfooter();?>

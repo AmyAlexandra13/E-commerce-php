@@ -1,26 +1,34 @@
-class validation{
+// class validation{
 
+    
+//     sendmessage(){
+//         alert("You must fill out everything");
+//     } 
 
-    sendmessage(){
-        alert("You must fill out everything");
-
-    }
-}   
-
-
-
+//     printing(){
+//         alert("you are printing");
+//     }
+    
+// }   
 
 document.getElementById("btn-contact").addEventListener("click",function()
 {
-    let message = new validation();
+    // let message = new validation();
 if(document.getElementById("contact-name") == "" || document.getElementById("contact-lastname") == "" || document.getElementById("contact-email") == "" || document.getElementById("contact-comment") == "");
-    {
-   message.sendmessage();
-    } 
 
-  
+alert("You must fill out everything");
     
+
 });
+
+// document.getElementById("btn-print").addEventListener("click",function()
+// {
+//     let message = new validation();
+//     message.printing();
+
+// });
+
+
 
  // if(document.getElementById("contact-name") == "" || document.getElementById("contact-lastname") == "" || document.getElementById("contact-email") == "" || document.getElementById("contact-comment") == "");
     // {
