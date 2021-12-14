@@ -11,3 +11,21 @@
        margin-bottom: 1rem;
     }
 }
+
+
+@media(max-width: 400px){
+    .firstinfo{
+        img{
+            display: none;
+        }
+
+        .image1-text{
+            display: inline;
+            position: relative;
+            margin: 0 auto;
+            padding-top: 2rem;
+            padding-right: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
